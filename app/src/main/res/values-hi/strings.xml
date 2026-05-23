@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">यूपी सेवा हब</string>
+    <string name="app_tagline">सभी सरकारी सेवाएँ</string>
+
+    <string name="tab_home">होम</string>
+    <string name="tab_saved">सहेजे</string>
+    <string name="tab_about">बारे में</string>
+
+    <string name="search_hint">सेवा खोजें… (भूलेख, आय प्रमाण, FIR)</string>
+    <string name="section_popular">लोकप्रिय सेवाएँ</string>
+    <string name="section_categories">श्रेणियाँ</string>
+
+    <string name="open_official">ऐप में खोलें</string>
+    <string name="back">वापस</string>
+    <string name="uses_label">इसके लिए उपयोग करें</string>
+    <string name="how_label">कैसे उपयोग करें</string>
+    <string name="docs_label">आवश्यक दस्तावेज़</string>
+    <string name="no_favorites">अभी कोई सहेजी सेवा नहीं। किसी भी सेवा पर ★ दबाएँ।</string>
+    <string name="no_results">कोई सेवा नहीं मिली। दूसरा शब्द आज़माएँ।</string>
+
+    <string name="settings_language">भाषा</string>
+    <string name="services_count">सेवाएँ</string>
+
+    <string name="webview_loading">आधिकारिक साइट लोड हो रही है…</string>
+    <string name="webview_clean_toggle">स्वच्छ UI</string>
+    <string name="webview_share">साझा करें</string>
+    <string name="webview_refresh">रीफ्रेश</string>
+    <string name="webview_open_external">ब्राउज़र में खोलें</string>
+
+    <string name="disclaimer">अनधिकृत एग्रीगेटर। डेटा यूपी/भारत सरकार की आधिकारिक साइटों से। हम कोई शुल्क नहीं लेते। OTP कभी साझा न करें।</string>
+
+    <string name="about_blurb">यूपी सेवा हब उत्तर प्रदेश की सभी सरकारी सेवाओं को एक ऐप में लाता है — भूमि अभिलेख, प्रमाण पत्र, न्यायालय स्थिति, राशन कार्ड, परिवहन, शिकायत आदि।</string>
+    <string name="about_for">नागरिकों, वकीलों, प्रॉपर्टी डीलरों और सभी के लिए जो दर्जनों सरकारी साइटों के बीच नहीं घूमना चाहते।</string>
+</resources>

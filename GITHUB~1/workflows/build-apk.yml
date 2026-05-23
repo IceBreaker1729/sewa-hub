@@ -1,0 +1,66 @@
+# Auto-build the UP Sewa Hub APK on every push.
+# After this workflow finishes, download the APK from:
+#   Actions tab → latest run → "Artifacts" → app-debug.apk
+#
+# This is the no-installs-needed path: you push the source, GitHub
+# builds the APK for you in the cloud, you download and install on your phone.
+
+name: Build Android APK
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:        # adds a "Run workflow" button you can click manually
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write       # needed to create a release with the APK attached
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v3
+
+      - name: Generate Gradle wrapper
+        run: gradle wrapper --gradle-version 8.7
+        working-directory: ./
+
+      - name: Build debug APK
+        run: ./gradlew assembleDebug --no-daemon --stacktrace
+        working-directory: ./
+
+      - name: Rename APK with version
+        run: |
+          mv app/build/outputs/apk/debug/app-debug.apk UPSewaHub-v${{ github.run_number }}.apk
+        working-directory: ./
+
+      - name: Upload APK as workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: UPSewaHub-debug-apk
+          path: UPSewaHub-v${{ github.run_number }}.apk
+          retention-days: 30
+
+      # Optional: also publish to a GitHub Release so your phone can download it directly
+      - name: Attach to GitHub Release
+        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: build-${{ github.run_number }}
+          name: UP Sewa Hub build ${{ github.run_number }}
+          body: |
+            Auto-built APK from commit `${{ github.sha }}`.
+
+            **Install on phone:** download the `.apk` below, open it on your Android device, allow "Install unknown apps" if prompted.
+          files: UPSewaHub-v${{ github.run_number }}.apk
+          generate_release_notes: false

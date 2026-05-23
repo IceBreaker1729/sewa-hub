@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">UP Sewa Hub</string>
+    <string name="app_tagline">All UP Govt Services</string>
+
+    <string name="tab_home">Home</string>
+    <string name="tab_saved">Saved</string>
+    <string name="tab_about">About</string>
+
+    <string name="search_hint">Search services… (Bhulekh, Income Cert, FIR)</string>
+    <string name="section_popular">Popular Services</string>
+    <string name="section_categories">Categories</string>
+
+    <string name="open_official">Open in App</string>
+    <string name="back">Back</string>
+    <string name="uses_label">Use this for</string>
+    <string name="how_label">How to use</string>
+    <string name="docs_label">Documents needed</string>
+    <string name="no_favorites">No saved services yet. Tap ★ on any service to save it.</string>
+    <string name="no_results">No services found. Try a different keyword.</string>
+
+    <string name="settings_language">Language</string>
+    <string name="services_count">services</string>
+
+    <string name="webview_loading">Loading official site…</string>
+    <string name="webview_clean_toggle">Clean UI</string>
+    <string name="webview_share">Share</string>
+    <string name="webview_refresh">Refresh</string>
+    <string name="webview_open_external">Open in browser</string>
+
+    <string name="disclaimer">Unofficial aggregator. Data sourced from official UP / Govt of India websites. We never charge fees or store your credentials. Always verify URLs and never share OTPs.</string>
+
+    <string name="about_blurb">UP Sewa Hub brings every Uttar Pradesh government service into one easy app — land records, certificates, court status, ration card, transport, grievances and more. Tap a service to open it inside the app with a cleaner interface.</string>
+    <string name="about_for">Built for citizens, lawyers, property agents and anyone tired of jumping between dozens of UP govt sites.</string>
+</resources>
